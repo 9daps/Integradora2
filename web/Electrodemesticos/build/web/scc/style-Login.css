@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px 30px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    text-align: center;
+    animation: fadeInScale 0.8s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #4a4a4a;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+::placeholder {
+    color: #a0a0a0;
+}
